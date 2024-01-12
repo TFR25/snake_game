@@ -42,6 +42,7 @@ while start_game:
     if snake.head.xcor() > 300 or snake.head.xcor() < -300 or snake.head.ycor() > 300 or snake.head.ycor() < -300:
         scoreboard.set_high_score()
         scoreboard.update_scoreboard()
+        snake.reset_snake()
         # start_game = False
         # scoreboard.end_game()
 
@@ -50,6 +51,7 @@ while start_game:
         if snake.head.distance(segment) < 10:
             scoreboard.set_high_score()
             scoreboard.update_scoreboard()
+            snake.reset_snake()
             # start_game = False
             # scoreboard.end_game()
 
